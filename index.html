@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speciala de Vday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="melodie" loop>
+        <source src="melodie.mp3" type="audio/mpeg">
+        Browserul tau nu suporta audio.
+    </audio>
+    <div class="background-hearts" id="background-hearts"></div>
+
+    <!-- Task Modal -->
+    <div id="task-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Mesaj important!</h2>
+            <p>Baba mea, avem un task.</p>
+            <p>Daca e sa iesim pe Duminica, trebuie sa rupi speciala asta!</p>
+            <button id="close-modal-btn" class="spin-button"
+                style="margin-top: 20px; font-size: 1.2rem; padding: 10px 30px;">Bine</button>
+        </div>
+    </div>
+
+    <!-- Valentine Question Modal -->
+    <div id="valentine-modal" class="modal-overlay hidden-modal">
+        <div class="modal-content">
+            <h2 id="valentine-question">Vrei sa fii Valentine-ul meu?</h2>
+            <div class="valentine-buttons"
+                style="margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <button id="val-yes-btn" class="spin-button"
+                    style="background: #4cc9f0; border-color: #4895ef;">DA!</button>
+                <button id="val-no-btn" class="spin-button" style="background: #ef233c; border-color: #d90429;">Du-te-n
+                    sange de sobolan</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <h1 class="title">In viata ta nu vezi asa pacanea</h1>
+
+        <div class="slot-machine">
+            <div class="reels-container">
+                <div class="reel" id="reel1">
+                    <div class="symbol">❓</div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="symbol">❓</div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="symbol">❓</div>
+                </div>
+            </div>
+
+            <div class="machine-bottom">
+                <div class="controls">
+                    <button id="spin-btn" class="spin-button">Invarte</button>
+                </div>
+            </div>
+
+            <div class="decorations">
+                <div class="light left"></div>
+                <div class="light right"></div>
+            </div>
+        </div>
+
+        <div id="result-message" class="result-message hidden">
+            <h2></h2>
+            <p id="prize-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
